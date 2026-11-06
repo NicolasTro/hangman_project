@@ -39,6 +39,6 @@ print(utils.dibujar_ahorcado(juego.errores))
 print("========================= GAMEOVER =========================")
     
 if juego.ha_ganado():
-    print(f"¡Felicitaciones! Ganaste. La palabra era: {juego.palabra_secreta}")
+    print(f"\n¡Felicitaciones! Ganaste. La palabra era: {juego.palabra_secreta}")
 else:
-    print(f"¡Perdiste! Se te vino la noche. La palabra era: {juego.palabra_secreta}")
+    print(f"\n¡Perdiste! Se te vino la noche. La palabra era: {juego.palabra_secreta}")
