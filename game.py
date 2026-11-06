@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-#Logica del juego
-class Game:
+# Clase HangmanGame (lógica del juego)
+class HangmanGame:
 
     #Constante para almacenar la cantidad maxima de errores permitidos en el juego.
     MAX_ERRORES = 6
