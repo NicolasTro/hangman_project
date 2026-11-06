@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from game import Game
+from game import HangmanGame
 import utils
 
 # Obtenemos una palabra secreta y se la pasamos a Game
 palabra_secreta = utils.get_palabra_random()
-juego = Game(palabra_secreta)
+juego = HangmanGame(palabra_secreta)
 
 print("~~Juego del ahorcado~~")
 
