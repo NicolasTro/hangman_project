@@ -38,3 +38,7 @@ class Game:
     def ha_ganado(self) -> bool:
         # Ganó si todas las letras de la palabra fueron adivinadas
         return all(letra in self.letras_adivinadas for letra in self.palabra_secreta)
+
+    def obtener_progreso(self) -> str:
+        # Devuelve la palabra oculta mostrando solo las letras adivinadas
+        return " ".join(letra if letra in self.letras_adivinadas else "_" for letra in self.palabra_secreta)
