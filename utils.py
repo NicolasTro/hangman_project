@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import random
 
-def get_palabra_random():
+def get_random_word():
     """Lee el archivo y devuelve una palabra aleatoria"""
     with open("wordlist.txt", "r", encoding="utf-8") as archivo:
         
@@ -16,7 +16,7 @@ def get_palabra_random():
         return random.choice(palabras)
 
 
-def dibujar_ahorcado(errores: int) -> str:
+def draw_hangman(errores: int) -> str:
     """Devuelve el dibujo ASCII  correspondiente a la cantidad de errores (0 a 6)."""
     estados = [
         # 0 errores

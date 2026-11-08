@@ -6,7 +6,7 @@ class Player:
         self.nombre = nombre
         self.puntaje = puntaje
 
-#Properties, getNombre()
+    #Properties, getNombre()
     @property    
     def nombre(self):
         return self.__nombre
@@ -17,6 +17,7 @@ class Player:
             raise ValueError("El nombre no puede estar vacio")
         self.__nombre = nombre
 
+    # Properties, get puntaje
     @property
     def puntaje(self):
         return self.__puntaje
@@ -27,7 +28,6 @@ class Player:
             raise ValueError("El puntaje no puede ser negativo")
         self.__puntaje = puntaje
 
-    
-    
+    # Sobreescribimos el metodo str       
     def __str__(self):
         return f"Nombre: {self.__nombre}, Puntaje: {self.__puntaje}"
