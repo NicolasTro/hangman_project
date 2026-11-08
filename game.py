@@ -41,11 +41,11 @@ class HangmanGame:
 
     def is_won(self) -> bool:
         # Ganó si todas las letras de la palabra fueron adivinadas
-        return all(letra in self.letras_adivinadas for letra in self.palabra_secreta if letra.isalpha())
+        return all(letra in self.guessed_letters for letra in self.word if letra.isalpha())
 
     def display_progress(self) -> str:
         # Devuelve la palabra oculta mostrando solo las letras adivinadas
-        return " ".join(letra if (letra in self.letras_adivinadas or not letra.isalpha()) else "_" for letra in self.palabra_secreta)
+        return " ".join(letra if (letra in self.guessed_letters or not letra.isalpha()) else "_" for letra in self.word)
     def calculate_score(self) -> int:
         # Calcula el puntaje de la partida según las reglas del juego.
         if self.is_won():

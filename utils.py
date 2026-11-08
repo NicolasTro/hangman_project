@@ -9,8 +9,7 @@ def get_random_word():
         palabras = []
         for linea in archivo:
             palabra = linea.strip()
-            if palabra.isalpha():
-                palabras.append(palabra)
+            palabras.append(palabra)
                 
         # Selecciona y devuelve una palabra al azar de la lista
         return random.choice(palabras)
