@@ -20,16 +20,6 @@ class HangmanGame:
         self.guessed_letters = set()
         self.letras_erradas = set()
         
-    def display_progress(self) -> str:
-        # Muestra la palabra oculta
-        progreso = []
-        for char in self.word:
-            if not char.isalpha() or char in self.guessed_letters:
-                progreso.append(char)
-            else:
-                progreso.append("_")
-        return " ".join(progreso)
-
     def process_guess(self, letra: str) -> bool:
         
         # Pasamos todo a mayus
@@ -53,7 +43,7 @@ class HangmanGame:
         # Ganó si todas las letras de la palabra fueron adivinadas
         return all(letra in self.letras_adivinadas for letra in self.palabra_secreta if letra.isalpha())
 
-    def obtener_progreso(self) -> str:
+    def display_progress(self) -> str:
         # Devuelve la palabra oculta mostrando solo las letras adivinadas
         return " ".join(letra if (letra in self.letras_adivinadas or not letra.isalpha()) else "_" for letra in self.palabra_secreta)
     def calculate_score(self) -> int:
