@@ -15,7 +15,7 @@ class HangmanGame:
         self.__player = player
         self.__max_errors = 6
         self.__errors = 0
-        self.__guessed_letters = set(c for c in self.__word if not c.isalpha())
+        self.__guessed_letters = set()
         self.__letras_erradas = set()
 
     # Getters / Properties
