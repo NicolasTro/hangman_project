@@ -23,7 +23,12 @@ while not nombre_valido:
         print(f"Error: {e}. Intenta nuevamente.")
 
 # Obtenemos una palabra secreta y creamos la partida asociando al jugador
-palabra_secreta = utils.get_random_word()
+try:
+    palabra_secreta = utils.get_random_word()
+except ValueError as e:
+    print(f"Error: {e}")
+    sys.exit(1)
+
 juego = HangmanGame(palabra_secreta, jugador)
 
 # El juego continúa hasta que gane o pierda
