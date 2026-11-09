@@ -15,7 +15,7 @@ class HangmanGame:
         self.__player = player
         self.__max_errors = 6
         self.__errors = 0
-        self.__guessed_letters = set()
+        self.__guessed_letters = set(c for c in self.__word if not c.isalpha())
         self.__letras_erradas = set()
 
     # Getters / Properties
@@ -69,6 +69,7 @@ class HangmanGame:
     def display_progress(self) -> str:
         # Devuelve la palabra oculta mostrando solo las letras adivinadas
         return " ".join(letra if (letra in self.__guessed_letters or not letra.isalpha()) else "_" for letra in self.__word)
+
     def calculate_score(self) -> int:
         # Calcula el puntaje de la partida según las reglas del juego.
         if self.is_won():

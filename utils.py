@@ -15,7 +15,7 @@ def get_random_word():
     if not palabras:
         raise ValueError("El archivo wordlist.txt está vacío o no contiene palabras válidas.")
         # Devuelve una palabra al azar de la lista
-        return random.choice(palabras)
+    return random.choice(palabras)
 
 
 def draw_hangman(errores: int) -> str:
