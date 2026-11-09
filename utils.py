@@ -9,8 +9,12 @@ def get_random_word():
         palabras = []
         for linea in archivo:
             palabra = linea.strip()
-            palabras.append(palabra)
-                
+            # Si la línea tiene contenido la agregamos a palabras
+            if palabra:
+                palabras.append(palabra)
+    # Validamos fuera del ciclo si la lista está vacía
+    if not palabras:
+        raise ValueError("El archivo wordlist.txt está vacío o no contiene palabras válidas.")
         # Selecciona y devuelve una palabra al azar de la lista
         return random.choice(palabras)
 
