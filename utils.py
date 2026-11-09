@@ -4,18 +4,17 @@ import random
 def get_random_word():
     """Lee el archivo y devuelve una palabra aleatoria"""
     with open("wordlist.txt", "r", encoding="utf-8") as archivo:
-        
-        # Lee todas las líneas, elimina espacios y filtra las palabras válidas
+        # Lee todas las líneas, elimina espacios y valida si la lista esta vacía
         palabras = []
         for linea in archivo:
             palabra = linea.strip()
-            # Si la línea tiene contenido la agregamos a palabras
+            # Si la línea tiene contenido la agrega a palabras
             if palabra:
                 palabras.append(palabra)
-    # Validamos fuera del ciclo si la lista está vacía
+    # Valida fuera del ciclo si la lista está vacía
     if not palabras:
         raise ValueError("El archivo wordlist.txt está vacío o no contiene palabras válidas.")
-        # Selecciona y devuelve una palabra al azar de la lista
+        # Devuelve una palabra al azar de la lista
         return random.choice(palabras)
 
 
